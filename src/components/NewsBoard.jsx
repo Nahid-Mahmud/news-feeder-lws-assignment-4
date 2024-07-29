@@ -15,7 +15,13 @@ const NewsBoard = () => {
       {data?.map((news, index) => (
         <div key={index} className=" max-w-md  border rounded-md drop-shadow-md p-5  text-justify">
           {/* image */}
-          <img src={news?.urlToImage} className="rounded-md mb-5 drop-shadow" alt="" />
+          <div className="overflow-hidden">
+            <img
+              src={news?.urlToImage}
+              className="rounded-md mb-5 drop-shadow hover:scale-110 transition-all duration-500  "
+              alt=""
+            />
+          </div>
           <a href="#">
             <h3 className="mb-2.5 text-2xl  font-bold hover:text-green-700 transition-all duration-300 lg:text-[28px]">
               {news?.title}
