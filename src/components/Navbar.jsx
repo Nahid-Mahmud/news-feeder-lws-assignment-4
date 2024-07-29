@@ -4,6 +4,7 @@ import Logo from "../assets/logo.png";
 import Search from "../assets/icons/search.svg";
 import useNewsQuery from "../hooks/useNewsQuery";
 import { NewsContext } from "../contexts";
+import { useDebounce } from "../hooks/useDebounce";
 
 const Navbar = () => {
   // state for showing and hiding the search box
@@ -16,6 +17,15 @@ const Navbar = () => {
   const toggleSearch = () => {
     setShowSearch(!showSearch);
   };
+
+  // useDebounce hook to debounce the search query
+
+
+  const handleSetSearchQuery = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  
 
   // const {} = useContext(NewsContext);
 
@@ -69,7 +79,7 @@ const Navbar = () => {
           {/* search box */}
           <form>
             <input
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => handleSetSearchQuery(e)}
               type="text"
               placeholder="Search"
               className={`border-slate-400 border focus:border-black  rounded-lg px-4 py-2 w-40 lg:w-60 transition-opacity duration-300 ease-out ${

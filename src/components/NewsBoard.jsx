@@ -6,7 +6,7 @@ const NewsBoard = () => {
   const newsData = useNewsQuery();
   const { searchData } = useContext(NewsContext);
 
-  const data = searchData.length > 0 ? searchData : newsData;
+  const data = searchData?.length > 0 ? searchData : newsData;
 
   return (
     <main className="my-10 lg:my-14 grid grid-cols-1 xl:grid-cols-3 mx-auto px-5">
