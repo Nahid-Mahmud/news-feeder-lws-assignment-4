@@ -14,6 +14,8 @@ const NewsBoard = () => {
 
       {data?.map((news, index) => (
         <div key={index} className=" max-w-md  text-justify">
+          {/* image */}
+          <img src={news?.urlToImage} alt="" />
           <a href="#">
             <h3 className="mb-2.5 text-2xl  font-bold lg:text-[28px]">{news?.title}</h3>
           </a>
