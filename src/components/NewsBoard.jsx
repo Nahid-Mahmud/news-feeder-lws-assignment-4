@@ -9,15 +9,17 @@ const NewsBoard = () => {
   const data = searchData?.length > 0 ? searchData : newsData;
 
   return (
-    <main className="my-10 lg:my-14 grid grid-cols-1 xl:grid-cols-3 mx-auto px-5">
+    <main className="my-10 lg:my-14 flex flex-wrap gap-x-5 gap-y-10  mx-auto px-5">
       {/* show search data if availave  else show news data */}
 
       {data?.map((news, index) => (
-        <div key={index} className=" max-w-md  text-justify">
+        <div key={index} className=" max-w-md  border rounded-md drop-shadow-md p-5  text-justify">
           {/* image */}
-          <img src={news?.urlToImage} alt="" />
+          <img src={news?.urlToImage} className="rounded-md mb-5 drop-shadow" alt="" />
           <a href="#">
-            <h3 className="mb-2.5 text-2xl  font-bold lg:text-[28px]">{news?.title}</h3>
+            <h3 className="mb-2.5 text-2xl  font-bold hover:text-green-700 transition-all duration-300 lg:text-[28px]">
+              {news?.title}
+            </h3>
           </a>
           <p className="text-base text-[#5C5955]">{news?.description}</p>
           <p className="mt-5 text-base text-[#5C5955] pb-5">

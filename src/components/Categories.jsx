@@ -12,7 +12,7 @@ const Categories = () => {
     <div className="container mx-auto   mt-6">
       <ul className="flex flex-wrap items-center justify-center gap-5 text-xs font-semibold lg:text-base">
         <li
-          className={`cursor-pointer transition-all duration-300 ${
+          className={`cursor-pointer transition-all duration-300 hover:text-green-600 ${
             category === "general" ? "text-green-700 scale-105 font-bold" : ""
           }`}
           onClick={() => handleClick("General")}
@@ -20,7 +20,7 @@ const Categories = () => {
           General
         </li>
         <li
-          className={`cursor-pointer transition-all duration-300 ${
+          className={`cursor-pointer transition-all duration-300 hover:text-green-600 ${
             category === "business" ? "text-green-700 scale-105 font-bold" : ""
           } `}
           onClick={() => handleClick("Business")}
@@ -28,7 +28,7 @@ const Categories = () => {
           Business
         </li>
         <li
-          className={`cursor-pointer transition-all duration-300 ${
+          className={`cursor-pointer transition-all duration-300 hover:text-green-600 ${
             category === "entertainment" ? "text-green-700 scale-105 font-bold" : ""
           } 
         }`}
@@ -37,7 +37,7 @@ const Categories = () => {
           Entertainment
         </li>
         <li
-          className={`cursor-pointer transition-all duration-300 ${
+          className={`cursor-pointer transition-all duration-300 hover:text-green-600 ${
             category === "health" ? "text-green-700 scale-105 font-bold" : ""
           }`}
           onClick={() => handleClick("Health")}
@@ -45,7 +45,7 @@ const Categories = () => {
           Health
         </li>
         <li
-          className={`cursor-pointer transition-all duration-300 ${
+          className={`cursor-pointer transition-all duration-300 hover:text-green-600 ${
             category === "science" ? "text-green-700 scale-105 font-bold" : ""
           }`}
           onClick={() => handleClick("Science")}
@@ -53,7 +53,7 @@ const Categories = () => {
           Science
         </li>
         <li
-          className={`cursor-pointer transition-all duration-300 ${
+          className={`cursor-pointer transition-all duration-300 hover:text-green-600 ${
             category === "sports" ? "text-green-700 scale-105 font-bold" : ""
           }`}
           onClick={() => handleClick("Sports")}
@@ -61,7 +61,7 @@ const Categories = () => {
           Sports
         </li>
         <li
-          className={`cursor-pointer transition-all duration-300 ${
+          className={`cursor-pointer transition-all duration-300 hover:text-green-600 ${
             category === "technology" ? "text-green-700 scale-105 font-bold" : ""
           } 
         }`}
