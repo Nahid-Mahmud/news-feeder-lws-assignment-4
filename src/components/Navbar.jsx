@@ -15,17 +15,14 @@ const Navbar = () => {
 
   // function to toggle the search box
   const toggleSearch = () => {
-    setShowSearch(!showSearch);
+    setShowSearch((prev) => !prev);
   };
 
   // useDebounce hook to debounce the search query
 
-
   const handleSetSearchQuery = (e) => {
     setSearchQuery(e.target.value);
   };
-
-  
 
   // const {} = useContext(NewsContext);
 
