@@ -74,16 +74,16 @@ const Navbar = () => {
 
         <div className="flex items-center space-x-3 lg:space-x-3">
           {/* search box */}
-          <form>
-            <input
-              onChange={(e) => handleSetSearchQuery(e)}
-              type="text"
-              placeholder="Search"
-              className={`border-slate-400 border focus:border-black  rounded-lg px-4 py-2 w-40 lg:w-60 transition-opacity duration-300 ease-out ${
-                showSearch ? "opacity-100" : "opacity-0"
-              } `}
-            />
-          </form>
+
+          <input
+            onChange={(e) => handleSetSearchQuery(e)}
+            type="text"
+            placeholder="Search"
+            className={`border-slate-400 border focus:border-black  rounded-lg px-4 py-2 w-40 lg:w-60 transition-opacity duration-300 ease-out ${
+              showSearch ? "opacity-100" : "opacity-0"
+            } `}
+          />
+
           <div className="">
             <img onClick={toggleSearch} src={Search} />
           </div>
