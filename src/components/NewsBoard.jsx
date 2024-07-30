@@ -18,7 +18,7 @@ const NewsBoard = () => {
           <div className="overflow-hidden">
             <img
               src={news?.urlToImage}
-              className={`  rounded-md mb-5 drop-shadow h-full hover:scale-110 transition-all duration-500  `}
+              className={`  rounded-md mb-5 drop-shadow hover:scale-110 transition-all duration-500 h-56 w-full`}
               alt={news?.urlToImage ? news?.title : "No Image Available for this news"}
             />
           </div>
