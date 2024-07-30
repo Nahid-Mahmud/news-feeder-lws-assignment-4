@@ -5,6 +5,7 @@ import Search from "../assets/icons/search.svg";
 import useNewsQuery from "../hooks/useNewsQuery";
 import { NewsContext } from "../contexts";
 import { useDebounce } from "../hooks/useDebounce";
+import getFormattedDate from "../utils/getFormattedDate";
 
 const Navbar = () => {
   // state for showing and hiding the search box
@@ -65,7 +66,7 @@ const Navbar = () => {
               strokeLinejoin="round"
             />
           </svg>
-          <span>Thursday, February 25, 2021</span>
+          <span>{getFormattedDate(Date.now())}</span>
         </div>
         {/* Logo */}
         <img src={Logo} alt="" />
@@ -79,8 +80,8 @@ const Navbar = () => {
             onChange={(e) => handleSetSearchQuery(e)}
             type="text"
             placeholder="Search"
-            className={`border-slate-400 border focus:border-black  rounded-lg px-4 py-2 w-40 lg:w-60 transition-opacity duration-300 ease-out ${
-              showSearch ? "opacity-100" : "opacity-0"
+            className={`border-slate-400 border focus:border-black  rounded-lg px-4 py-2 w-40 lg:w-60 transition-opacity duration-300 ease-in-out ${
+              showSearch ? "opacity-100 scale-100" : "opacity-0 scale-0"
             } `}
           />
 
